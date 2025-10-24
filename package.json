@@ -1,0 +1,25 @@
+{
+  "name": "lead-finder-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI to find local leads (FB-only or no website) via Google Places API (New) and export CSV.",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "find": "tsx src/index.ts",
+    "lint": "echo 'lint step (optional)'"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "p-limit": "^5.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
