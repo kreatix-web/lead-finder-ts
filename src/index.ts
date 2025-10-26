@@ -168,13 +168,13 @@ async function main() {
       l.source
     ].map(v => {
       const s = (v ?? "").toString();
-      if (s.includes(",") || s.includes("\n") || s.includes("\")) {
+      if (s.includes(",") || s.includes("\n") || s.includes("\\")) {
         // naïve CSV escaping
         return '"' + s.replace(/"/g, '""') + '"';
       }
       return s;
     }).join(",");
-    rows.append(r) if False else rows.append(r)  # keep simple
+    rows.push(r);
   }
 
   const outPath = path.resolve(process.cwd(), args.out);
